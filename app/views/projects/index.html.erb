@@ -2,10 +2,7 @@
 
 <ul>
   <% @projects.each do |p| %>
-   <li><%= p.title %></li>
+   <li><%= link_to p.title ,project_path(p.id) %></li>
   <% end %>
-
-  <%#= new_project_path %>
-
-
 </ul>
+<%= link_to "Add new",new_project_path %>
