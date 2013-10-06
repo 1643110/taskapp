@@ -2,7 +2,11 @@
 
 <ul>
   <% @projects.each do |p| %>
-   <li><%= link_to p.title ,project_path(p.id) %></li>
+   <li>
+       <%= link_to p.title ,project_path(p.id) %> 
+       <%= link_to "edit", edit_project_path(p.id) %> 
+       <%= link_to "destory",project_path(p.id),method: :delete ,data: {confirm: "Are you sure?"} %>
+</li>
   <% end %>
 </ul>
 <%= link_to "Add new",new_project_path %>
