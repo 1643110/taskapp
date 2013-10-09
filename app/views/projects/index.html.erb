@@ -1,11 +1,11 @@
 <h1>Projects</h1>
 
 <ul>
-  <% @projects.each do |p| %>
+  <% @projects.each do |project| %>
    <li>
-       <%= link_to p.title ,project_path(p.id) %> 
-       <%= link_to "edit", edit_project_path(p.id) %> 
-       <%= link_to "destory",project_path(p.id),method: :delete ,data: {confirm: "Are you sure?"} %>
+       <%= link_to project.title ,project_path(project.id) %> (<%= project.tasks.unfinished.count %>/<%= project.tasks.count %>)
+       <%= link_to "edit", edit_project_path(project.id) %> 
+       <%= link_to "destory",project_path(project.id),method: :delete ,data: {confirm: "Are you sure?"} %>
 </li>
   <% end %>
 </ul>

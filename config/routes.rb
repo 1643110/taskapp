@@ -15,8 +15,10 @@ Taskapp::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resources :projects do
-    resource :tasks
+    resources :tasks
   end
+
+  post '/projects/:project_id/tasks/:id/toggle' => 'tasks#toggle'
 
   # Example resource route with options:
   #   resources :products do
