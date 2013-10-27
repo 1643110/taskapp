@@ -47,6 +47,12 @@ end
 
 group :development, :test do
   gem 'spring'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'faker'
 end
 
 group :development do
@@ -60,13 +66,4 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rails-footnotes', :git => 'git://github.com/tommireinikainen/rails-footnotes'
-end
-
-group :test do
-  gem 'capybara'
-  gem 'rspec-rails'
-  gem 'guard-rspec'
-  gem 'factory_girl_rails'
-  gem 'database_cleaner'
-  gem 'faker'
 end
