@@ -23,10 +23,10 @@ describe Project do
       expect(@project.save).to be_true
     end
 
-    # it 'プロジェクトがないこと（Jenkinsでわざとテスト失敗させたいだけ）' do
-    #   FactoryGirl.create(:project)
-    #   expect(Project.count).to eq(0)
-    # end
+    it 'プロジェクトがないこと（Jenkinsでわざとテスト失敗させたいだけ）' do
+      FactoryGirl.create(:project)
+      expect(Project.count).to eq(0)
+    end
   end
 
 end
