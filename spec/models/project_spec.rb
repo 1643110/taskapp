@@ -10,7 +10,7 @@ describe Project do
 
     it 'プロジェクトが１つ以上であること' do
       FactoryGirl.create(:project)
-      expect(Project.count).to be_>= 1
+      expect(Project.count).to be >= 1
     end
 
     it 'プロジェクトタイトルが3桁未満は登録出来ないこと' do
@@ -23,6 +23,10 @@ describe Project do
       expect(@project.save).to be_true
     end
 
+    it 'プロジェクトがないこと（Jenkinsでわざとテスト失敗させたいだけ）' do
+      FactoryGirl.create(:project)
+      expect(Project.count).to eq(0)
+    end
   end
 
 end
