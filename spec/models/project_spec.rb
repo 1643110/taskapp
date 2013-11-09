@@ -8,10 +8,10 @@ describe Project do
       expect(@project.save).to be_true
     end
 
-    it 'プロジェクトが１つ以上であること' do
-      FactoryGirl.create(:project)
-      expect(Project.count).to be_>= 1
-    end
+    # it 'プロジェクトが１つ以上であること' do
+    #   FactoryGirl.create(:project)
+    #   expect(Project.count).to be_>= 1
+    # end
 
     it 'プロジェクトタイトルが3桁未満は登録出来ないこと' do
       @project = FactoryGirl.build(:project, title: "プロ")
