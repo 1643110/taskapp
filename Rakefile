@@ -4,3 +4,6 @@
 require File.expand_path('../config/application', __FILE__)
 
 Taskapp::Application.load_tasks
+
+# CI Tools
+require 'ci/reporter/rake/rspec'

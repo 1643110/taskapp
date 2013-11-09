@@ -55,6 +55,7 @@ group :development, :test do
   gem 'faker'
   gem 'simplecov'
   gem 'simplecov-rcov'
+  gem 'ci_reporter'
 end
 
 group :development do

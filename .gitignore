@@ -20,3 +20,4 @@
 /tmp
 /Gemfile.lock
 coverage
+/spec/reports/*
