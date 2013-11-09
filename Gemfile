@@ -53,6 +53,8 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'faker'
+  gem 'simplecov'
+  gem 'simplecov-rcov'
 end
 
 group :development do
